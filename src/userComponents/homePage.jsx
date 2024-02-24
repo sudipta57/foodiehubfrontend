@@ -46,7 +46,7 @@ const HomePage = () => {
     const { email, password } = userinfo;
     try {
       const res = await fetch(
-        "https://main--foodiehubbackend.netlify.app/api/login",
+        "https://foodiehubbackend.onrender.com/api/login",
         {
           method: "POST",
           headers: {
