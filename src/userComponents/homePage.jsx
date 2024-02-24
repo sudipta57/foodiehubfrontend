@@ -46,7 +46,7 @@ const HomePage = () => {
     const { email, password } = userinfo;
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/login",
+        "https://foodiehub-backend.vercel.app/api/login",
         {
           method: "POST",
           headers: {
@@ -95,7 +95,7 @@ const HomePage = () => {
     const { email, password } = resturantinfo;
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/resturantlogin",
+        "https://foodiehub-backend.vercel.app/api/resturantlogin",
         {
           method: "POST",
           headers: {

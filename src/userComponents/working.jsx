@@ -26,7 +26,7 @@ const Cart = () => {
   const sendrequest = async () => {
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/working",
+        "https://foodiehub-backend.vercel.app/api/working",
         {
           method: "GET",
           headers: {
@@ -116,7 +116,7 @@ const Cart = () => {
   const Createpayment = async (price) => {
     try {
       const res = await axios.post(
-        "https://foodiehubbackend.onrender.com/api/create-payment",
+        "https://foodiehub-backend.vercel.app/api/create-payment",
         {
           price,
         }
@@ -133,7 +133,7 @@ const Cart = () => {
           "https://cdn.pixabay.com/photo/2021/03/19/13/40/online-6107598_640.png",
         order_id: res.data.id,
         callback_url:
-          "https://foodiehubbackend.onrender.com/api/paymentverification",
+          "https://foodiehub-backend.vercel.app/api/paymentverification",
 
         notes: {
           address: "foodiehub official",
@@ -152,7 +152,7 @@ const Cart = () => {
   // // initiating payment
   // const initiatePayment = async () => {
   //   try {
-  //     const res = await fetch("https://foodiehubbackend.onrender.com/api/initiatepayment", {
+  //     const res = await fetch("https://foodiehub-backend.vercel.app/api/initiatepayment", {
   //       method: "POST",
   //       headers: {
   //         "Content-Type": "application/json",
@@ -199,7 +199,7 @@ const Cart = () => {
               >
                 <Flex justifyContent="space-between" w="50%">
                   <Image
-                    src={`https://foodiehubbackend.onrender.com/${cartData.img}`}
+                    src={`https://foodiehub-backend.vercel.app/${cartData.img}`}
                     w="50"
                     h="50"
                     borderRadius="10px"

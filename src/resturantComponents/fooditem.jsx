@@ -55,7 +55,7 @@ const Fooditem = () => {
       formData.append("description", description);
 
       const response = await fetch(
-        "https://foodiehubbackend.onrender.com/api/insertFoodData",
+        "https://foodiehub-backend.vercel.app/api/insertFoodData",
         {
           method: "POST",
           credentials: "include",

@@ -25,7 +25,7 @@ const Registration = () => {
 
   const getsecretcode = async () => {
     const res = await fetch(
-      "https://foodiehubbackend.onrender.com/api/getcode",
+      "https://foodiehub-backend.vercel.app/api/getcode",
       {
         method: "GET",
         headers: {
@@ -67,7 +67,7 @@ const Registration = () => {
     const { name, email, phone, work, password, cpassword } = userinfo;
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/registration",
+        "https://foodiehub-backend.vercel.app/api/registration",
         {
           method: "POST",
           headers: {
@@ -129,7 +129,7 @@ const Registration = () => {
     const { name, email, phone, address, password, cpassword } = resturantinfo;
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/resturantregistration",
+        "https://foodiehub-backend.vercel.app/api/resturantregistration",
         {
           method: "POST",
           headers: {
@@ -183,7 +183,7 @@ const Registration = () => {
 
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/createotp",
+        "https://foodiehub-backend.vercel.app/api/createotp",
         {
           method: "POST",
           headers: {
@@ -235,7 +235,7 @@ const Registration = () => {
 
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/createresotp",
+        "https://foodiehub-backend.vercel.app/api/createresotp",
         {
           method: "POST",
           headers: {

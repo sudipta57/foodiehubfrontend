@@ -8,7 +8,7 @@ const Logout = () => {
   const fetchdata = async () => {
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/logout",
+        "https://foodiehub-backend.vercel.app/api/logout",
         {
           method: "GET",
           headers: {

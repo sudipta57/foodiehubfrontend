@@ -7,7 +7,7 @@ const ResturantCard = () => {
   const fetchResturantData = async () => {
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/resturantdata",
+        "https://foodiehub-backend.vercel.app/api/resturantdata",
         {
           method: "GET",
           headers: {

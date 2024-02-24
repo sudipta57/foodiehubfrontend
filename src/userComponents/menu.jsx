@@ -38,7 +38,7 @@ const Menu = () => {
   const sendFoodRequest = async () => {
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/resturantmenu",
+        "https://foodiehub-backend.vercel.app/api/resturantmenu",
         {
           method: "GET",
           headers: {
@@ -63,7 +63,7 @@ const Menu = () => {
   const catagoryData = async () => {
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/foodcatagory",
+        "https://foodiehub-backend.vercel.app/api/foodcatagory",
         {
           method: "GET",
           headers: {

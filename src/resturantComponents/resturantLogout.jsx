@@ -9,7 +9,7 @@ const ResturantLogout = () => {
   const fetchresturantdata = async () => {
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/resturantlogout",
+        "https://foodiehub-backend.vercel.app/api/resturantlogout",
         {
           method: "GET",
           headers: {

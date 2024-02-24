@@ -33,7 +33,7 @@ const Contact = () => {
   const getUserdata = async () => {
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/getdata",
+        "https://foodiehub-backend.vercel.app/api/getdata",
         {
           method: "GET",
           headers: {
@@ -114,7 +114,7 @@ const Contact = () => {
     const { name, email, phone, message } = user;
     try {
       const res = await fetch(
-        "https://foodiehubbackend.onrender.com/api/contact",
+        "https://foodiehub-backend.vercel.app/api/contact",
         {
           method: "POST",
           headers: {
