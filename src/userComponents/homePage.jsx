@@ -16,10 +16,15 @@ import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const toast = useToast();
-  const [userinfo, setuserinfo] = useState({ email: "", password: "" });
   const [isLoginForm, setIsLoginForm] = useState(true);
-  const [resturantinfo, setresturantinfo] = useState({});
-  const { state, dispatch } = useContext(MyContext);
+  const {
+    state,
+    dispatch,
+    userinfo,
+    setuserinfo,
+    resturantinfo,
+    setresturantinfo,
+  } = useContext(MyContext);
   const navigate = useNavigate();
   const switchToLogin = () => {
     setIsLoginForm(true);

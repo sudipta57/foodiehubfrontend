@@ -18,7 +18,7 @@ const Cart = () => {
   const { state } = useContext(MyContext);
   const toast = useToast();
   const [userAddress, setUserAddress] = useState(null);
-  const [phone, setphone] = useState("");
+  // const [phone, setphone] = useState("");
   // const [foodname, setfoodname] = useState("");
   // const [foodquantity, setfoodquantity] = useState("");
 
@@ -39,8 +39,6 @@ const Cart = () => {
       if (!res.ok) {
         throw new Error(res.error);
       }
-      const data = await res.json();
-      setphone(data.phone);
     } catch (error) {
       navigate("/");
       console.error(error);
@@ -308,7 +306,7 @@ const Cart = () => {
                 userAddress ? (
                   <>
                     <Text fontSize="15px" fontWeight="bold">
-                      {userAddress},{phone}
+                      {userAddress}
                     </Text>
                   </>
                 ) : (
@@ -375,7 +373,7 @@ const Cart = () => {
                 fontWeight="bold"
                 cursor="pointer"
                 onClick={() => {
-                  if (state === "userin" && handelLocation) {
+                  if (state === "userin" && userAddress) {
                     Createpayment(itemTotal.toFixed(2));
                   } else {
                     toast({

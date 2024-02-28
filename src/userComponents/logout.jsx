@@ -3,31 +3,34 @@ import { useNavigate } from "react-router-dom";
 import { MyContext } from "../App";
 
 const Logout = () => {
-  const Navigate = useNavigate();
-  const { state, dispatch } = useContext(MyContext);
+  const navigate = useNavigate();
+  const { userinfo, dispatch } = useContext(MyContext);
+  const { email } = userinfo;
+  console.log(email);
   const fetchdata = async () => {
     try {
       const res = await fetch(
         "https://foodiehub-backend.vercel.app/api/logout",
         {
-          method: "GET",
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           credentials: "include",
+          body: JSON.stringify({ email }),
         }
       );
       if (!res.ok) {
-        console.log(res.error);
+        console.error("Error:", res.error);
       }
-      const data = res.json();
-      if (!res.status == 200 || !data) {
-        console.log(data.error);
+      const data = await res.json();
+      if (!res.status === 200 || !data) {
+        console.error("Error:", data.error);
       }
       dispatch({ type: "USEROUT" });
-      Navigate("/");
+      navigate("/");
     } catch (error) {
-      console.error(error);
+      console.error("Error:", error);
     }
   };
 

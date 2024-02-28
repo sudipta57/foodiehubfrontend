@@ -18,6 +18,8 @@ export const MyContext = createContext();
 function App() {
   const initialstate = false;
   const [state, dispatch] = useReducer(reducer, initialstate);
+  const [userinfo, setuserinfo] = useState({ email: "", password: "" });
+  const [resturantinfo, setresturantinfo] = useState({});
 
   const [cartdata, setCartdata] = useState([]);
 
@@ -30,6 +32,10 @@ function App() {
             dispatch,
             cartdata,
             setCartdata,
+            userinfo,
+            setuserinfo,
+            resturantinfo,
+            setresturantinfo,
           }}
         >
           <Navbar />
