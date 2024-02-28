@@ -18,11 +18,10 @@ export const MyContext = createContext();
 function App() {
   const initialstate = false;
   const [state, dispatch] = useReducer(reducer, initialstate);
-  const [userinfo, setuserinfo] = useState({ email: "", password: "" });
+  const [userinfo, setuserinfo] = useState({});
   const [resturantinfo, setresturantinfo] = useState({});
 
   const [cartdata, setCartdata] = useState([]);
-
   return (
     <>
       <Router>

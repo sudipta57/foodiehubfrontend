@@ -36,7 +36,6 @@ const Registration = () => {
       }
     );
     const data = await res.json();
-    console.log(data.seccode);
     dispatch({ type: "codedata", payload: data.seccode });
   };
   useEffect(() => {
@@ -230,7 +229,6 @@ const Registration = () => {
   const reshandleVerifyClick = async () => {
     dispatch({ type: "resloading", payload: true });
     const { email } = resturantinfo;
-    console.log(email);
     //now start the server side code
 
     try {
@@ -305,7 +303,6 @@ const Registration = () => {
   };
   const resotponclick = () => {
     const { InputOtp, otp } = resturantinfo;
-    console.log(InputOtp, otp);
     if (InputOtp === otp) {
       toast({
         title: "Otp verified",

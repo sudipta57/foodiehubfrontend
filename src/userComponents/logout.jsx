@@ -6,7 +6,6 @@ const Logout = () => {
   const navigate = useNavigate();
   const { userinfo, dispatch } = useContext(MyContext);
   const { email } = userinfo;
-  console.log(email);
   const fetchdata = async () => {
     try {
       const res = await fetch(

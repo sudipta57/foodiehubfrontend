@@ -4,18 +4,21 @@ import { useNavigate } from "react-router-dom";
 
 const ResturantLogout = () => {
   const Navigate = useNavigate();
-  const { dispatch } = useContext(MyContext);
+  const { dispatch, resturantinfo } = useContext(MyContext);
+  const { email } = resturantinfo;
+
   // for resturant
   const fetchresturantdata = async () => {
     try {
       const res = await fetch(
         "https://foodiehub-backend.vercel.app/api/resturantlogout",
         {
-          method: "GET",
+          method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           credentials: "include",
+          body: JSON.stringify({ email }),
         }
       );
 

@@ -82,7 +82,7 @@ const HomePage = () => {
             duration: 2000,
             isClosable: true,
           });
-          setuserinfo({ email: "", password: "" });
+
           dispatch({ type: "USERIN" });
           // navigate("/");
         }
