@@ -37,17 +37,14 @@ const Menu = () => {
   // get food data
   const sendFoodRequest = async () => {
     try {
-      const res = await fetch(
-        "https://foodiehub-backend.vercel.app/api/resturantmenu",
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        }
-      );
+      const res = await fetch("http://localhost:3000/api/resturantmenu", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
       const data = await res.json();
       if (!res.ok) {
         throw new Error(data.error);
@@ -62,17 +59,14 @@ const Menu = () => {
   // Getting category data
   const catagoryData = async () => {
     try {
-      const res = await fetch(
-        "https://foodiehub-backend.vercel.app/api/foodcatagory",
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        }
-      );
+      const res = await fetch("http://localhost:3000/api/foodcatagory", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
       const catagoryData = await res.json();
       if (!Array.isArray(catagoryData)) {
         throw new Error("Invalid category data");

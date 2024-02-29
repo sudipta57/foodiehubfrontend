@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { MyContext } from "../App";
+import { Center, Spinner } from "@chakra-ui/react";
 
 const Logout = () => {
   const navigate = useNavigate();
@@ -37,7 +38,17 @@ const Logout = () => {
     fetchdata();
   }, []);
 
-  return <div>Logout</div>;
+  return (
+    <Center>
+      <Spinner
+        thickness="4px"
+        speed="0.65s"
+        emptyColor="gray.200"
+        color="blue.500"
+        size="xl"
+      />
+    </Center>
+  );
 };
 
 export default Logout;

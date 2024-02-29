@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { MyContext } from "../App";
 import { useNavigate } from "react-router-dom";
+import { Center, Spinner } from "@chakra-ui/react";
 
 const ResturantLogout = () => {
   const Navigate = useNavigate();
@@ -35,7 +36,17 @@ const ResturantLogout = () => {
   useEffect(() => {
     fetchresturantdata();
   }, []);
-  return <div>ResturantLogout</div>;
+  return (
+    <Center>
+      <Spinner
+        thickness="4px"
+        speed="0.65s"
+        emptyColor="gray.200"
+        color="blue.500"
+        size="xl"
+      />
+    </Center>
+  );
 };
 
 export default ResturantLogout;
