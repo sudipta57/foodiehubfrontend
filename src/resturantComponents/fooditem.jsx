@@ -64,7 +64,7 @@ const Fooditem = () => {
       );
       const data = await response.json();
       console.log(data);
-      if (data.ok) {
+      if (data.message) {
         // Handle success
         toast({
           title: "Food item saved",
