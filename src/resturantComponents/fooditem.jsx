@@ -63,7 +63,6 @@ const Fooditem = () => {
         }
       );
       const data = await response.json();
-      console.log(data);
       if (data.message) {
         // Handle success
         toast({
